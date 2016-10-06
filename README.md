@@ -2,6 +2,12 @@
 
 This is an example repository of lazily loading React in webpack.
 
+## Try it out
+
+- `npm install && npm start`
+- `npm install && npm run build`
+
+
 It supports two APIs:
 
 ## Higher Order Component for Specifying Dependencies
