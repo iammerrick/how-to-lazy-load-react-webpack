@@ -29,7 +29,7 @@ class Bootstrap extends React.Component {
             onClick={this.handleClick}>Press Here To Load</a>
         </p>
         <LazilyLoad modules={{ 
-          LoadedLate: () => importLazy(System.import('./LoadedLate'))
+          LoadedLate: () => importLazy(import('./LoadedLate')),
         }}>
           {({LoadedLate}) => <LoadedLate />}
         </LazilyLoad>

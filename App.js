@@ -12,5 +12,5 @@ export default LazilyLoadFactory(class extends React.Component {
   }
   
 }, {
-  $: () => System.import('jquery'),
+  $: () => import('jquery'),
 });
