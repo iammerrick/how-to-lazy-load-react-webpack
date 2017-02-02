@@ -30,8 +30,19 @@ class Bootstrap extends React.Component {
         </p>
         <LazilyLoad modules={{ 
           LoadedLate: () => importLazy(import('./LoadedLate')),
+          LoadedLateAsClass: () => importLazy(import('./LoadedLateAsClass')),
         }}>
-          {({LoadedLate}) => <LoadedLate />}
+        {({LoadedLate, LoadedLateAsClass}) => {
+          return (
+            <div>
+              <LoadedLateAsClass ref={(ref) => {
+                // Not recommended, try and keep it declarative if you can!
+                ref.hello();
+              }} />
+              <LoadedLate />
+            </div>
+          );
+        }}
         </LazilyLoad>
         {this.state.load ? <App /> : null}
       </div>
