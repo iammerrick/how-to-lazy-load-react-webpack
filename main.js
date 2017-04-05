@@ -35,10 +35,7 @@ class Bootstrap extends React.Component {
         {({LoadedLate, LoadedLateAsClass}) => {
           return (
             <div>
-              <LoadedLateAsClass ref={(ref) => {
-                // Not recommended, try and keep it declarative if you can!
-                ref.hello();
-              }} />
+              <LoadedLateAsClass />
               <LoadedLate />
             </div>
           );
